@@ -1,9 +1,19 @@
 const addButton = document.querySelector('.add');
-const removeBook = document.querySelector('.book');
+const div = document.querySelector('.book');
 const form = document.querySelector('form');
 const overlay = document.querySelector('.overlay');
 const closeForm = document.querySelector('.close');
 const submit = document.querySelector('.submit');
+const removeBtn = document.querySelector('.remove');
+
+function Book(title, author, pages, language, date, status){
+    this.title=title;
+    this.author=author;
+    this.pages=pages;
+    this.language=language;
+    this.date=date;
+    this.status=status;
+}
 closeForm.addEventListener('click', deleteForm)
 addButton.addEventListener('click', createForm);
 function deleteForm(){
