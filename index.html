@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/books.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,7 +32,32 @@
             <p>Language: English</p>
             <p>Published: July 1 1996</p>
         </div>
+        
     </main>
+    <form >
+        <p class="close">x</p>
+        <h3>Add a New Book</h3>
+        <label for="title">Book title:*</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="author">Author:*</label><br>
+        <input type="text" id="author" name="author"><br>
+        <label for="pages">Number of Pages:*</label><br>
+        <input type="number" id="pages" name="pages"><br>
+        <label for="language">Language:*</label><br>
+        <input type="text" id="language" name="language"><br>
+        <label for="date">Publishing Date:*</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="status">Book status:*</label><br>
+        <select id="status" name="status">
+            <option selected>Did you read this book?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <input type="submit" class="submit">
+
+
+    </form>
+    <div class="overlay" id="overlay"></div>
     
     <div class="button"> <button type="button" class="add">+</button></div>
     
