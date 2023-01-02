@@ -140,3 +140,6 @@ input {
 .close:hover{
     font-weight:bold;
 }
+.submit{
+    width: 200px;
+}
