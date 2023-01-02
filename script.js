@@ -5,6 +5,7 @@ const overlay = document.querySelector('.overlay');
 const closeForm = document.querySelector('.close');
 const submit = document.querySelector('.submit');
 const removeBtn = document.querySelector('.remove');
+let myLibrary =[];
 
 function Book(title, author, pages, language, date, status){
     this.title=title;
@@ -14,8 +15,15 @@ function Book(title, author, pages, language, date, status){
     this.date=date;
     this.status=status;
 }
-closeForm.addEventListener('click', deleteForm)
+function addBooktoLibrary(){
+
+}
+function removeBook(){
+    div.style.display='none';
+}
+closeForm.addEventListener('click', deleteForm);
 addButton.addEventListener('click', createForm);
+removeBtn.addEventListener('click', removeBook);
 function deleteForm(){
     form.classList.remove('active')
      overlay.classList.remove('active')
