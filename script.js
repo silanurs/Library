@@ -28,7 +28,7 @@ function addBooktoLibrary(){
     let newBook = new Book(document.getElementById("title").value, document.getElementById("author").value, document.getElementById("pages").value, 
     document.getElementById("language").value, document.getElementById("date").value, document.getElementById("status").value)
     myLibrary.push(newBook)
-    
+    console.log(myLibrary)
     form.classList.remove('active')
     overlay.classList.remove('active')
     for(let i=0; i < myLibrary.length; i++){
@@ -54,17 +54,26 @@ function addBooktoLibrary(){
         date.textContent = "Date: " + myLibrary[i].date;
         div.append(date);
         main.append(div);
+        if(myLibrary[i].status === "yes"){
+            div.style.backgroundImage = "linear-gradient(70deg,#eaea7f, #fdaf75)";
+        } else {
+            div.style.backgroundImage = "linear-gradient(70deg,#f7ccac, #c69b7b)";
+        }
+        const removeBtns = document.querySelectorAll('.remove');
+        const books = document.querySelectorAll('.book');
+        removeBtns.forEach(btn => btn.addEventListener('click', ()=> {books.forEach(book =>{book.style.display ="none"})}))
         
      }
+     form.reset();
     
 }
-const books = document.querySelectorAll('.book');
-const removeBtns = document.querySelectorAll('.remove');
-removeBtns.forEach(button => button.addEventListener('click', removeBook))
-function removeBook(){
+//const books = document.querySelectorAll('.book');
+//const removeBtns = document.querySelectorAll('.remove');
+//removeBtns.forEach(button => button.addEventListener('click', removeBook))
+/*function removeBook(){
     
     books.forEach(book => book.style.display="none")
-}
+}*/
 closeForm.addEventListener('click', deleteForm);
 addButton.addEventListener('click', createForm);
 
