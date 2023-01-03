@@ -11,7 +11,7 @@ body{
     padding:0;
     background: var(--background);
     font-family:"Sofia", "sans-serif";
-    font-size:16px;
+    font-size:20px;
 }
 
 .navbar {
@@ -39,7 +39,7 @@ h2 {
     display: flex;
     flex-direction:column;
     height:fit-content;
-    font-size: 13px;
+    font-size: 16px;
     padding-left:10px;
     
 }
@@ -54,12 +54,14 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
     column-gap: 10px;
+    row-gap:10px;
 }
 .add {
     width: 50px;
     height:50px;
     border:none;
-    margin-top: 20vh;
+    position:fixed;
+    bottom: 5vh;
     font-size: 30px;
     border-radius: 100%;
     color: var(--text);
@@ -107,12 +109,12 @@ form{
     z-index: 3;
     top: 50%;
     left: 50%;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     border-radius: 10px;
     background-color: var(--background);
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     user-select: none;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
@@ -121,7 +123,7 @@ form.active{
     transform: translate(-50%, -50%) scale(1);
 }
 input, select {
-    width: 200px;
+    width: 250px;
 }
 
 .overlay {
