@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/books.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -38,20 +38,20 @@
         <p class="close">x</p>
         <h3>Add a New Book</h3>
         <label for="title">Book title:*</label><br>
-        <input type="text" id="title" name="title"><br>
+        <input type="text" id="title" class="input"name="title"><br>
         <label for="author">Author:*</label><br>
-        <input type="text" id="author" name="author"><br>
+        <input type="text" id="author" name="author" class="input"><br>
         <label for="pages">Number of Pages:*</label><br>
-        <input type="number" id="pages" name="pages"><br>
+        <input type="number" id="pages" name="pages" class="input"><br>
         <label for="language">Language:*</label><br>
-        <input type="text" id="language" name="language"><br>
+        <input type="text" id="language" name="language" class="input"><br>
         <label for="date">Publishing Date:*</label><br>
-        <input type="date" id="date" name="date"><br>
+        <input type="date" id="date" name="date" class="input"><br>
         <label for="status">Book status:*</label><br>
-        <select id="status" name="status">
+        <select id="status" name="status" class="input">
             <option selected disabled>Did you read this book?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="yes" class="status">Yes</option>
+            <option value="no" class="status">No</option>
         </select><br>
         <button type="button" class="submit">Submit</button>
 
@@ -62,5 +62,6 @@
     <div class="button"> <button type="button" class="add">+</button></div>
     
     <footer></footer>
+    <script src="script.js" ></script>
 </body>
 </html>
