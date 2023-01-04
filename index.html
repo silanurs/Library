@@ -14,46 +14,38 @@
     <header>
         <nav class="navbar">
            <img class="logoImage" src="images/books.jpg">
-           <h1 style="font-size: 40px;">Library</h1>
+           <h1 >Library</h1>
            <div class="count">
-            <h2>Library Log</h2>
+            
             <span>Total books: <span class="total"></span></span>
-            <span class="read">Read:</span>
-            <span class="notRead">Not Read:</span>
+            
            </div>
         </nav>
     </header>
     <main> 
-       <!-- <div class="book">
-            <p class="remove">x</p>
-            <h3>Game Of Thrones</h3>
-            <p>Author: George R.R. Martin</p>
-            <p>Number of Pages: 1000</p>
-            <p>Language: English</p>
-            <p>Published: July 1 1996</p>
-        </div>-->
+      
         
     </main>
     <form >
         <p class="close">x</p>
         <h3>Add a New Book</h3>
         <label for="title">Book title:*</label><br>
-        <input type="text" id="title" class="input"name="title"><br>
+        <input type="text" id="title" class="input"name="title" required><br>
         <label for="author">Author:*</label><br>
-        <input type="text" id="author" name="author" class="input"><br>
+        <input type="text" id="author" name="author" class="input" required><br>
         <label for="pages">Number of Pages:*</label><br>
-        <input type="number" id="pages" name="pages" class="input"><br>
+        <input type="number" id="pages" name="pages" class="input" required><br>
         <label for="language">Language:*</label><br>
-        <input type="text" id="language" name="language" class="input"><br>
+        <input type="text" id="language" name="language" class="input" required><br>
         <label for="date">Publishing Date:*</label><br>
-        <input type="date" id="date" name="date" class="input"><br>
+        <input type="date" id="date" name="date" class="input" required><br>
         <label for="status">Book status:*</label><br>
-        <select id="status" name="status" class="input">
+        <select id="status" name="status" class="input" required>
             <option selected disabled>Did you read this book?</option>
             <option value="yes" class="status">Yes</option>
             <option value="no" class="status">No</option>
         </select><br>
-        <button type="button" class="submit">Submit</button>
+        <button type="submit" class="submit">Submit</button>
 
 
     </form>
