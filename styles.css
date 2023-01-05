@@ -32,16 +32,35 @@ h2 {
     padding:0;
     margin:0;
 }
+.container{
+    margin-left:auto;
+    display:flex;
+    column-gap: 15px;
+}
 .count {
     width: 150px;
     border: 1px solid var(--text);
-    margin-left:auto;
+    
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
     height:fit-content;
     font-size: 20px;
     padding-left:10px;
     
+}
+.lg{
+    display:flex;
+    column-gap: 15px;
+}
+.lg-read {
+    background-image:linear-gradient(70deg,#f7ccac, #c69b7b) ;
+    width: 50px;
+    height: 30px;
+}
+.lg-unread{
+    background-image: linear-gradient(70deg,#594545, #9e7676);
+    width: 50px;
+    height: 30px;
 }
 .logoImage {
     width:70px;
@@ -173,8 +192,8 @@ input, select {
         margin:0;
         top:0;
         width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
         background: var(--navBar);
         display:flex;
         justify-content: flex-start;
@@ -194,6 +213,22 @@ input, select {
     }
     h1 {
         font-size: 20px;
+    }
+    .lg-read {
+        font-size: 16px;
+        width: 40px;
+        height: 20px;
+    }
+    .lg-unread{
+        font-size:16px;
+        width:40px;
+        height: 20px;
+    }
+    .lg{
+        column-gap: 5px;
+    }
+    .cotainer {
+        column-gap: 5px;
     }
 
 }
