@@ -15,11 +15,18 @@
         <nav class="navbar">
            <img class="logoImage" src="images/books.jpg">
            <h1 >Library</h1>
-           <div class="count">
-            
-            <span>Total books: <span class="total"></span></span>
-            
+           <div class="container">
+            <div class="lg">
+            <div>Read: </div>
+            <div class="lg-read"></div>
+            <div>Not Read: </div>
+            <div class="lg-unread"></div>
            </div>
+           <div class="count">
+            <span>Total books: <span class="total">0</span></span>
+           </div>
+           </div>
+           
         </nav>
     </header>
     <main> 
@@ -41,7 +48,7 @@
         <input type="date" id="date" name="date" class="input" required><br>
         <label for="status">Book status:*</label><br>
         <select id="status" name="status" class="input" required>
-            <option selected disabled>Did you read this book?</option>
+            <option selected disabled value="">Did you read this book?</option>
             <option value="yes" class="status">Yes</option>
             <option value="no" class="status">No</option>
         </select><br>
