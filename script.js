@@ -89,7 +89,7 @@ function createCard(book){
         
         main.append(div);
         if(book.status === "yes"){
-
+           
             checkbox.checked = true;
             div.style.backgroundImage = "linear-gradient(70deg,#f7ccac, #c69b7b)";
         } else {
@@ -99,15 +99,19 @@ function createCard(book){
         }
         cmcontainer.addEventListener('click', checkboxValue)
         function checkboxValue(){
-            console.log(myLibrary)
+          
         if(checkbox.checked == true){
+          
             div.style.backgroundImage = "linear-gradient(70deg,#f7ccac, #c69b7b)";
             book.status="yes"
             div.style.color="#594545"
+            setData()
         } else {
+            
             div.style.backgroundImage = "linear-gradient(70deg,#594545, #9e7676)";
             div.style.color = "#ffeddb"
             book.status="no"
+            setData()
         }}
 
        
