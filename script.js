@@ -5,7 +5,7 @@ const form = document.querySelector('form');
 const overlay = document.querySelector('.overlay');
 const closeForm = document.querySelector('.close');
 const submit = document.querySelector('.submit');
-const warnings = document.querySelectorAll('.warning')
+
 const inputs = document.querySelectorAll('.input');
 const main = document.querySelector('main');
 
@@ -26,6 +26,7 @@ function Book(title, author, pages, language, date, status){
     this.language=language;
     this.date=date;
     this.status=status;
+   
   
 }
 
@@ -66,13 +67,50 @@ function createCard(book){
         let date = document.createElement('p');
         date.textContent = "Date: " + book.date;
         div.append(date);
+        let cmcontainer= document.createElement('div');
+        cmcontainer.classList.add('cmcontainer');
+        cmcontainer.style.display = "inline-flex";
+        cmcontainer.style.justifyContent ="flex-end";
+        cmcontainer.style.alignItems="center";
+        cmcontainer.style.columnGap="0"
+        cmcontainer.style.width="100%"
+        div.append(cmcontainer);
+        let label = document.createElement('label');
+        label.setAttribute('for', 'checkmark');
+        label.textContent = "Mark as read: ";
+        label.style.width="150px"
+        cmcontainer.append(label)
+        let checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox')
+        checkbox.setAttribute('id', 'checkmark')
+        checkbox.style.height="20px"
+        checkbox.style.width="20px"
+        cmcontainer.append(checkbox);
+        
         main.append(div);
         if(book.status === "yes"){
+
+            checkbox.checked = true;
             div.style.backgroundImage = "linear-gradient(70deg,#f7ccac, #c69b7b)";
         } else {
+            checkbox.checked = false;
             div.style.backgroundImage = "linear-gradient(70deg,#594545, #9e7676)";
             div.style.color = "#ffeddb"
         }
+        cmcontainer.addEventListener('click', checkboxValue)
+        function checkboxValue(){
+            console.log(myLibrary)
+        if(checkbox.checked == true){
+            div.style.backgroundImage = "linear-gradient(70deg,#f7ccac, #c69b7b)";
+            book.status="yes"
+            div.style.color="#594545"
+        } else {
+            div.style.backgroundImage = "linear-gradient(70deg,#594545, #9e7676)";
+            div.style.color = "#ffeddb"
+            book.status="no"
+        }}
+
+       
         
         
         x.addEventListener('click', () =>{myLibrary.splice(myLibrary.indexOf(book),1)
