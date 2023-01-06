@@ -31,6 +31,7 @@ body{
 h2 {
     padding:0;
     margin:0;
+    
 }
 .container{
     margin-left:auto;
@@ -109,14 +110,14 @@ p, h3, div {
     padding:0;
 }
 .book {
-    background-image: linear-gradient(70deg,#ffeddb, #e3caa5);
+    
     padding-left: 10px;
     padding-right:10px;
     border-radius: 15px;
     
 }
 .remove{
-    font-size:16px;
+    font-size:20px;
     text-align:right;
     transition:font-weight 0.1s;
     transition-timing-function: linear;
@@ -170,12 +171,7 @@ input, select {
 .submit{
     width: 200px;
 }
-.warning {
-    font-size: 13px;
-    color:red;
-    text-align: left;
-    margin-left:30px;
-}
+
 @media screen and (max-width: 1000px){
     main {
     margin: 23vh 50px 5% 50px;
@@ -229,6 +225,11 @@ input, select {
     }
     .cotainer {
         column-gap: 5px;
+    }
+    .add {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
     }
 
 }
