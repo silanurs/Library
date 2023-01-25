@@ -19,7 +19,8 @@ String.prototype.capitalize = function () {
 submit.addEventListener('click', addBooktoLibrary)
 let myLibrary =[];
 let totalBooks = 0;
-function Book(title, author, pages, language, date, status){
+class Book {
+constructor (title, author, pages, language, date, status){
     this.title=title;
     this.author=author;
     this.pages=pages;
@@ -28,7 +29,7 @@ function Book(title, author, pages, language, date, status){
     this.status=status;
    
   
-}
+} }
 
 
 function addBooktoLibrary(){
