@@ -1,7 +1,7 @@
 # Library
 Live Demo : https://silanurs.github.io/Library/
 # Description
-A virtual library program to store the books you've always been meaning to read.
+A virtual library program to store the books you have.
 # Features 
 * Every book is saved to localStorage
 * Responsive on mobile
